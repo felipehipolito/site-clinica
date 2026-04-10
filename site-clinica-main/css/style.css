@@ -1,0 +1,540 @@
+
+/* Reset */
+* {
+  margin: 0;              /* Remove o espaçamento externo padrão de todos os elementos */
+  padding: 0;             /* Remove o espaçamento interno padrão de todos os elementos */
+  box-sizing: border-box; /* Faz com que padding e border sejam incluídos no cálculo da largura/altura */
+}
+
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Define a fonte do texto */
+  line-height: 1.6;                          /* Espaçamento vertical entre linhas */
+  background: #fff;                          /* Cor de fundo branca */
+  color: #333;                               /* Cor do texto (cinza escuro) */
+  padding: 10px 60px;                        /* Espaçamento interno (10px em cima/baixo, 60px nas laterais) */
+  overflow-x: hidden;      
+                    /* Remove barra de rolagem horizontal */
+
+}
+
+/* Navbar */
+header {
+  padding: 10px 60px;   /* Espaçamento interno do cabeçalho */
+  margin-bottom: 45px;  /* Distância inferior (separa o header do conteúdo abaixo) */
+}
+
+.navbar {
+  display: flex;                        /* Usa flexbox para alinhar itens */
+  justify-content: space-between;       /* Espaça os itens nas extremidades (esquerda/direita) */
+  align-items: center;                  /* Centraliza verticalmente os itens */
+}
+
+.logo {
+  display: flex;             /* Deixa os elementos internos lado a lado */
+  align-items: center;       /* Alinha verticalmente no centro */
+  gap: 8px;                  /* Espaço entre os itens dentro do logo */
+  font-size: 20px;           /* Tamanho da fonte */
+  font-weight: bold;         /* Deixa o texto em negrito */
+  color: #007BFF;            /* Azul principal do logo */
+}
+
+.logo img {
+  height: 140px;             /* Altura fixa da imagem */
+  width: 200px;              /* Largura fixa da imagem */
+  position: relative;        /* Mantém a posição relativa para possíveis ajustes */
+}
+
+.nav-links {
+  list-style: none;   /* Remove os marcadores da lista */
+  display: flex;      /* Coloca os links em linha */
+  gap: 30px;          /* Espaço entre os links */
+}
+
+.nav-links a {
+  text-decoration: none;  /* Remove o sublinhado dos links */
+  color: #333;            /* Define cor cinza escura */
+  font-weight: 500;       /* Peso intermediário da fonte */
+}
+
+.btn-primary {
+  background: #1E90FF;             /* Fundo azul */
+  color: #fff;                     /* Texto branco */
+  padding: 12px 20px;              /* Espaçamento interno (vertical/horizontal) */
+  border-radius: 6px;              /* Bordas arredondadas */
+  text-decoration: none;           /* Remove sublinhado */
+  font-weight: 600;                /* Texto seminegrito */
+  transition: background 0.3s ease;/* Transição suave na cor de fundo ao passar o mouse */
+}
+
+.btn-primary:hover {
+  background: #007BFF; /* Altera o tom do azul ao passar o mouse */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;              /* Layout em linha (texto e imagem lado a lado) */
+  justify-content: center;    /* Centraliza horizontalmente o conteúdo */
+  align-items: center;        /* Centraliza verticalmente */
+  gap: 20px;                  /* Espaço entre texto e imagem */
+  min-height: 100vh;          /* Ocupa 100% da altura da tela */
+  padding: 60px 100px;        /* Espaçamento interno */
+  margin-top: -180px;         /* Sobe a seção para sobrepor o header */
+}
+
+.hero-text {
+  flex: 1;        /* Ocupa o mesmo espaço que a imagem */
+  margin-top: 90px; /* Afasta o texto do topo */
+}
+
+.subtitle {
+  color: #007BFF;        /* Cor azul */
+  font-size: 25px;       /* Tamanho da fonte */
+  font-weight: 600;      /* Texto em seminegrito */
+  margin-bottom: 10px;   /* Espaço abaixo */
+}
+
+.hero-text h1 {
+  font-size: 48px;       /* Título grande */
+  font-weight: bold;     /* Negrito */
+  color: #1a2a4f;        /* Azul escuro */
+  margin-bottom: 20px;   /* Espaço inferior */
+  line-height: 1.2;      /* Espaçamento entre linhas reduzido */
+}
+
+.hero-text .description {
+  font-size: 16px;       /* Texto médio */
+  color: #555;           /* Cinza intermediário */
+  margin-bottom: 25px;   /* Espaço inferior */
+  margin-top: 20px;      /* Espaço superior */
+}
+
+.stats {
+  display: flex;         /* Exibe as estatísticas lado a lado */
+  gap: 80px;             /* Espaço entre os blocos */
+  margin-top: 120px;     /* Afasta da parte superior */
+}
+
+.stats div {
+  text-align: center;    /* Centraliza texto */
+  font-size: 14px;       /* Texto pequeno */
+  color: #444;           /* Cinza escuro */
+}
+
+.stats strong {
+  font-size: 22px;       /* Números maiores em destaque */
+  color: #1a2a4f;        /* Azul escuro */
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;              /* Divide espaço igualmente com o texto */
+  text-align: center;   /* Centraliza a imagem */
+}
+
+.hero-image img {
+  max-width: 150%;      /* Permite que a imagem ultrapasse um pouco o container */
+  height: auto;         /* Mantém a proporção da imagem */
+}
+
+/* Section - equipe médica */
+
+.about-doctors {
+  display: flex;             /* Usa o Flexbox para organizar o conteúdo em linha */
+  align-items: center;       /* Alinha os itens verticalmente ao centro */
+  justify-content: center;   /* Centraliza o conteúdo horizontalmente */
+  gap: 40px;                 /* Espaço entre a imagem e o texto */
+  background: #fff;          /* Cor de fundo branca */
+  padding: 40px;             /* Espaçamento interno em todos os lados */
+  border-radius: 12px;       /* Bordas arredondadas */
+  max-width: 1200px;         /* Largura máxima do container */
+  margin: auto;              /* Centraliza o container na tela (horizontalmente) */
+}
+
+.about-doctors img {
+  width: 500px;              /* Largura fixa da imagem */
+  height: auto;              /* Mantém a proporção da imagem automaticamente */
+  border-radius: 12px;       /* Bordas arredondadas na imagem */
+}
+
+.content {
+  flex: 1;                   /* Faz o texto ocupar o espaço restante ao lado da imagem */
+}
+
+.content h2 {
+  font-size: 32px;           /* Tamanho da fonte do título */
+  color: #1a2a4f;            /* Cor azul escuro */
+  margin-bottom: 20px;       /* Espaço abaixo do título */
+}
+
+.content p {
+  font-size: 16px;           /* Tamanho da fonte do parágrafo */
+  color: #555;               /* Cinza médio para o texto */
+  line-height: 1.6;          /* Espaçamento entre as linhas do parágrafo */
+  margin-bottom: 20px;       /* Espaço abaixo do parágrafo */
+}
+
+.features {
+  list-style: none;          /* Remove os marcadores padrão da lista */
+  padding: 0;                /* Remove o recuo interno da lista */
+  margin-bottom: 50px;       /* Espaço abaixo da lista */
+}
+
+.features li {
+  display: flex;             /* Cada item da lista usa flexbox (ícone + texto lado a lado) */
+  align-items: center;       /* Alinha verticalmente os ícones e textos */
+  gap: 10px;                 /* Espaço entre o ícone e o texto */
+  font-size: 16px;           /* Tamanho da fonte dos itens */
+  color: #333;               /* Cor do texto em cinza escuro */
+  margin-bottom: 10px;       /* Espaço entre os itens da lista */
+}
+
+.features li::before {
+  content: "✔️";             /* Adiciona o ícone de check antes de cada item */
+  color: #007BFF;            /* Cor azul do ícone */
+}
+
+/* Section Nossos Serviços */
+
+.services {  
+  background: #FAFAFE; 
+  margin-top:50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
+
+.services h2 {
+  font-size: 32px;           /* Tamanho da fonte do título */
+  color: #1a2a4f;            /* Cor azul escuro */
+  margin-bottom: 20px; 
+  margin-top:30px;      /* Espaço abaixo do título */
+}
+
+.description {
+  font-size: 16px;           /* Tamanho da fonte do parágrafo */
+  color: #555;               /* Cinza médio para o texto */
+  line-height: 1.6;          /* Espaçamento entre as linhas do parágrafo */
+  margin-bottom: 20px;  
+}
+
+.service-cards{
+  display: flex;
+  
+  flex-direction: row;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+
+/* Section Nossos Médicos */
+
+.doctors {  
+  background: #FFF; /* Define o fundo branco da seção */
+  margin-top:50px; /* Cria espaço acima da seção */
+  display: flex; /* Usa layout flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Centraliza horizontalmente os itens */
+  justify-content: center; /* Centraliza verticalmente os itens */
+  gap:20px; /* Espaçamento entre os elementos internos */
+}
+
+.doctors h2 {
+  font-size: 32px;           /* Define o tamanho do título */
+  color: #1a2a4f;            /* Define a cor azul escuro do texto */
+  margin-bottom: 20px;       /* Espaço abaixo do título */
+  margin-top:30px;           /* Espaço acima do título */
+}
+
+.doctor-cards{
+  display: flex;  /* Exibe os cartões lado a lado */
+  flex-direction: row; /* Organiza os cartões em linha */
+  gap: 25px; /* Espaçamento horizontal entre os cartões */
+  margin-bottom: 80px; /* Espaço inferior da seção de cartões */
+}
+
+.card{
+  width:300px; /* Largura fixa do cartão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor do cartão */
+  background: #FFF; /* Fundo branco do cartão */
+  color: 'red'; /* Define a cor do texto (aqui está incorreta, precisa sem aspas) */
+  border-radius:10px; /* Arredonda os cantos do cartão */
+  padding:20px; /* Espaçamento interno do conteúdo */
+  text-align: center; /* Centraliza o texto no cartão */
+}
+
+.card img {
+  border-radius: 50%; /* Deixa a imagem em formato circular */
+  width:154px; /* Largura da imagem do médico */
+  height:150px; /* Altura da imagem do médico */
+  background: #EFFAFD; /* Fundo claro para a imagem */
+}
+
+.card h3 {
+  margin-bottom:10px; /* Espaço abaixo do nome do médico */
+  margin-top:10px; /* Espaço acima do nome do médico */
+}
+
+.social-links {
+  gap: 20px; /* Espaçamento entre os ícones sociais */
+  margin-top: 10px; /* Espaço acima do grupo de ícones */
+} 
+
+.social-links a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: #007BFF; /* Cor azul dos ícones/link */
+  transition: color 0.3s ease; /* Suaviza a mudança de cor no hover */
+}
+
+.social-links img{
+  width:24px; /* Define a largura dos ícones sociais */
+  height:24px; /* Define a altura dos ícones sociais */
+  margin: 0 5px; /* Espaço horizontal entre os ícones */
+  margin-top: 10px; /* Espaço superior dos ícones sociais */
+}
+
+/* Section Contatos */
+.contact {  
+  background: #FAFAFE;            /* Fundo claro da seção de contato */
+  margin-top: 30px;               /* Espaço acima da seção */
+  display: flex;                  /* Usa layout flexível */
+  flex-direction: column;         /* Organiza os itens em coluna */
+  align-items: center;            /* Centraliza horizontalmente os itens */
+  justify-content: center;        /* Centraliza verticalmente os itens */
+  gap: 10px;                      /* Espaçamento entre os elementos internos */
+}
+
+.contact h2 {
+  font-size: 32px;                /* Tamanho da fonte do título */
+  color: #1a2a4f;                 /* Cor azul escuro do título */
+  margin-top: 30px;               /* Espaço acima do título */
+  margin-bottom: 10px;            /* Espaço abaixo do título */
+  text-align: center;            /* Centraliza o texto do título */
+}
+
+.contact p{
+  text-align: center;           /* Centraliza o texto */
+}
+
+.contact-container {
+  display: flex;                  /* Usa layout flexível */
+  flex-direction: row;            /* Organiza os itens em linha */
+  flex: 1;                        /* Ocupa toda a largura disponível */
+  justify-content: center;        /* Centraliza horizontalmente os itens */
+  align-items: stretch;           /* Faz as colunas terem a mesma altura */
+  gap: 20px;                      /* Espaçamento entre as colunas */
+  padding: 20px;                  /* Espaçamento interno do container */
+}
+
+.contact-info {
+  background: #FFF;  
+  height:600px;             /* Fundo branco para informações de contato */
+  display: flex;                  /* Usa layout flexível */
+  flex: 1;                        /* Ocupa metade da largura disponível */
+  flex-direction: column;         /* Organiza os itens em coluna */
+  gap: 20px;                      /* Espaçamento entre os elementos internos */
+  padding: 20px;                  /* Espaçamento interno */
+  margin-bottom: 20px;            /* Espaço inferior (para ajuste visual) */
+}
+
+.contact-item {
+  display: flex;                  /* Usa layout flexível */
+  flex-direction: row;            /* Ícone e texto lado a lado */
+  align-items: center;            /* Alinha verticalmente os itens */
+  gap: 15px;                      /* Espaçamento entre ícone e texto */
+  margin-bottom: 15px;            /* Espaço abaixo de cada item */
+}
+
+.contact-form {
+  background: #FFF;               /* Fundo branco para o formulário */
+  display: flex;                  /* Usa layout flexível */
+  flex-direction: column;         /* Organiza os campos em coluna */
+  align-items: center;            /* Centraliza horizontalmente os itens */
+  gap: 25px;                      /* Espaçamento entre os elementos internos */
+  width: 50%;                     /* Define largura da coluna */
+  padding: 20px;                  /* Espaçamento interno */
+  margin-bottom: 80px;            /* Espaço inferior do bloco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  border-radius: 8px;             /* Bordas suavemente arredondadas */
+}
+
+.contact-form h2 {
+  font-size: 32px;                /* Tamanho do título do formulário */
+  color: #1a2a4f;                 /* Cor azul escuro do título */
+  margin-top: 30px;               /* Espaço acima do título */
+  margin-bottom: 10px;            /* Espaço abaixo do título */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 60%;                     /* Largura dos campos e botão */
+  padding: 10px;                  /* Espaçamento interno */
+  margin-bottom: 40px;            /* Espaço abaixo de cada campo */
+  border: none;                   /* Remove a borda padrão */
+  outline: none;                  /* Remove o contorno no foco */
+  border-radius: 6px;             /* Bordas arredondadas */
+  font-size: 16px;                /* Tamanho da fonte */
+}
+
+form input,
+form textarea {
+  background: #FAFAFE;            /* Fundo claro dos campos */
+  border: 1px solid #ddd;         /* Borda cinza clara */
+}
+
+
+/* Section NewsLetter */
+
+.newsletter{
+  display: flex;                  /* Usa layout flexível */
+  flex-direction: column;         /* Organiza os itens em coluna */
+  background: #2AA9FF;            /* Fundo azul escuro */
+  color: #fff;                    /* Texto branco */
+  padding: 40px 20px;             /* Espaçamento interno */
+  text-align: center;             /* Centraliza o texto */          
+   
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter h2 {
+  font-size: 36px;                /* Tamanho do título */
+  margin-bottom: 15px;            /* Espaço abaixo do título */
+}
+
+.newsletter p {
+             /* Tamanho do título */
+  margin-bottom: 25px;            /* Espaço abaixo do título */
+}
+
+
+.newsletter input[type="email"] {
+  padding: 12px;                  /* Espaçamento interno do campo */
+  width: 300px;                   /* Largura fixa do campo */
+  border: none;                   /* Remove a borda padrão */
+  border-radius: 6px;             /* Bordas arredondadas */
+  margin-right: 10px;             /* Espaço à direita do campo */
+  font-size: 20px;                /* Tamanho da fonte */
+}
+
+.subscribe-container {
+  display: flex;                      /* Coloca input e botão lado a lado */
+  align-items: center;                /* Alinha verticalmente */
+  background: #fff;                   /* Fundo branco do campo */
+  border-radius: 8px;                 /* Bordas arredondadas */
+  overflow: hidden;                   /* Esconde cantos do botão */
+  width: 500px;                       /* Largura do componente */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Leve sombra */
+}
+
+.subscribe-container input {
+  flex: 1;                            /* Ocupa todo o espaço restante */
+  padding: 12px 16px;                 /* Espaçamento interno */
+  border: none;                       /* Remove bordas padrão */
+  outline: none;                      /* Remove contorno no foco */
+  font-size: 16px;                    /* Tamanho da fonte */
+  color: #333;                        /* Cor do texto */
+}
+
+.subscribe-container input::placeholder {
+  color: #999;                        /* Cor do placeholder */
+}
+
+.subscribe-container button {
+  background: #1E90FF;                /* Azul do botão */
+  color: #fff;                        /* Texto branco */
+  border: none;                         /* Remove borda */
+  padding: 12px 20px;                 /* Espaçamento interno */
+  cursor: pointer;                    /* Muda o cursor ao passar */
+  font-size: 16px;                    /* Tamanho da fonte */
+  font-weight: 600;                   /* Deixa o texto levemente negrito */
+  transition: background 0.3s ease;   /* Transição suave no hover */
+  border-radius: 10px;                /* Bordas arredondadas no botão */
+  margin-right: 5px;                  /* Espaço à direita do botão */
+}
+
+.subscribe-container button:hover {
+  background: #007BFF;                /* Azul mais escuro ao passar o mouse */
+}
+
+/* Footer */
+.footer {
+  background-color: #1a3e7a;       /* Fundo azul escuro */
+  color: #fff;                     /* Texto branco */
+  display: flex;                   /* Alinha as duas colunas */
+  justify-content: space-around;  /* Espaço entre esquerda e direita */
+  align-items: center;             /* Centraliza verticalmente */
+  padding: 40px 80px;             /* Espaçamento interno */
+  flex-wrap: wrap;                 /* Adapta em telas menores */
+  font-family: 'Poppins', sans-serif;
+  gap: 50px;                       /* Espaçamento entre os elementos */  
+}
+
+/* Coluna esquerda */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-footer img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Ícones das redes sociais */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Coluna direita */
+.footer-right {
+  text-align: right;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.footer-right p {
+  font-size: 14px;
+  opacity: 0.8;
+}
